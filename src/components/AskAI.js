@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function AskAI() {
   const [open, setOpen] = useState(false);
@@ -7,9 +7,11 @@ export default function AskAI() {
   const [loading, setLoading] = useState(false);
   const MAX_QUESTIONS = 5;
 
-const [questionCount, setQuestionCount] = useState(() => {
-  return Number(localStorage.getItem("questionCount") || 0);
-});
+const [questionCount, setQuestionCount] = useState(0);
+useEffect(() => {
+  const savedCount = Number(localStorage.getItem("questionCount") || 0);
+  setQuestionCount(savedCount);
+}, []);
 
   const askQuestion = async () => {
     if (!question.trim()) return;
