@@ -5,9 +5,25 @@ export default function AskAI() {
   const [question, setQuestion] = useState("");
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
+  const MAX_QUESTIONS = 5;
+
+const [questionCount, setQuestionCount] = useState(() => {
+  return Number(localStorage.getItem("questionCount") || 0);
+});
 
   const askQuestion = async () => {
     if (!question.trim()) return;
+
+if (questionCount >= MAX_QUESTIONS) {
+  setMessages((prev) => [
+    ...prev,
+    {
+      role: "bot",
+      text: "🚫 Demo limit reached. Please contact the administrator for full access.",
+    },
+  ]);
+  return;
+}
 
     const userMsg = { role: "user", text: question };
     setMessages((prev) => [...prev, userMsg]);
@@ -28,6 +44,9 @@ export default function AskAI() {
         sources: data.sources || [],
       };
       setMessages((prev) => [...prev, botMsg]);
+      const newCount = questionCount + 1;
+setQuestionCount(newCount);
+localStorage.setItem("questionCount", newCount);
     } catch (err) {
       setMessages((prev) => [
         ...prev,
@@ -96,7 +115,17 @@ export default function AskAI() {
             ))}
             {loading && <p style={{ color: "#888" }}>Thinking...</p>}
           </div>
-
+<div
+  style={{
+    padding: "8px 10px",
+    fontSize: "12px",
+    color: "#666",
+    borderTop: "1px solid #eee",
+    background: "#fafafa",
+  }}
+>
+  Questions remaining: {MAX_QUESTIONS - questionCount}
+</div>
           <div style={{ display: "flex", borderTop: "1px solid #eee" }}>
             <input
               type="text"
