@@ -17,14 +17,14 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">
-  Your central hub for technical documentation, user guides,
-  troubleshooting, and knowledge articles.
+  Search documentation, explore knowledge articles, and get
+  AI-powered answers from your organization's technical content.
 </p>
         <div className={styles.buttons}>
           <Link
   className="button button--secondary button--lg"
-  to="/docs/intro">
-  Get Started
+  to="/introduction-to-technical-writing">
+  Browse Documentation
 </Link>
         </div>
       </div>
@@ -37,7 +37,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={siteConfig.title}
-      ddescription="Technical documentation, user guides, and knowledge articles.">
+      description="Technical documentation, user guides, and knowledge articles.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

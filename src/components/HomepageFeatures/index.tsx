@@ -11,32 +11,32 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Getting Started',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'AI Documentation Assistant',
+    Svg: () => <div style={{fontSize: '64px'}}>🤖</div>,
     description: (
       <>
-        Learn how to set up, navigate, and use this documentation portal.
+        Ask natural language questions and receive answers directly from your documentation.
       </>
     ),
   },
   {
-    title: 'User Guides',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Technical Documentation',
+    Svg: () => <div style={{fontSize: '64px'}}>📚</div>,
     description: (
       <>
-        Browse step-by-step guides, procedures, and best practices.
+        Access API documentation, user guides, style guides, and technical knowledge articles.
       </>
     ),
   },
   {
-    title: 'Knowledge Base',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Find technical articles, FAQs, troubleshooting information, and reference material.
-      </>
-    ),
-  },
+  title: 'Fast Knowledge Retrieval',
+  Svg: () => <div style={{fontSize: '64px'}}>🔍</div>,
+  description: (
+    <>
+      Quickly locate relevant information, reduce search time, and improve documentation productivity.
+    </>
+  ),
+},
 ];
 
 function Feature({title, Svg, description}: FeatureItem) {

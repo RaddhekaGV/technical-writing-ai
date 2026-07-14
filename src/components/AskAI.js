@@ -80,13 +80,34 @@ localStorage.setItem("questionCount", newCount);
             overflow: "hidden",
           }}
         >
-          <div style={{ background: "#2e8555", color: "white", padding: "12px", fontWeight: "bold" }}>
-            Ask AI — Help Site Assistant
-          </div>
+          <div
+  style={{
+    background: "#1e3a8a",
+    color: "white",
+    padding: "14px",
+    fontWeight: "600",
+    fontSize: "16px",
+  }}
+>
+  🤖 Ask AI
+  <div style={{ fontSize: "12px", opacity: 0.85 }}>
+    Help Site Assistant
+  </div>
+</div>
 
           <div style={{ flex: 1, overflowY: "auto", padding: "10px", fontSize: "14px" }}>
             {messages.length === 0 && (
-              <p style={{ color: "#888" }}>Ask me anything about this Help site!</p>
+              <div style={{ color: "#666", lineHeight: "1.6" }}>
+  <strong>👋 Welcome!</strong>
+  <br /><br />
+  Ask me about:
+  <ul style={{ paddingLeft: "18px", marginTop: "8px" }}>
+    <li>API Documentation</li>
+    <li>User Guides</li>
+    <li>Troubleshooting</li>
+    <li>Style Guides</li>
+  </ul>
+</div>
             )}
             {messages.map((m, i) => (
               <div
@@ -99,7 +120,7 @@ localStorage.setItem("questionCount", newCount);
                 <div
                   style={{
                     display: "inline-block",
-                    background: m.role === "user" ? "#2e8555" : "#f1f1f1",
+                    background: m.role === "user" ? "#1e3a8a" : "#f1f1f1",
                     color: m.role === "user" ? "white" : "black",
                     padding: "8px 12px",
                     borderRadius: "10px",
@@ -124,9 +145,13 @@ localStorage.setItem("questionCount", newCount);
     color: "#666",
     borderTop: "1px solid #eee",
     background: "#fafafa",
+    lineHeight: "1.5",
   }}
 >
-  Questions remaining: {MAX_QUESTIONS - questionCount}
+  <div>Questions remaining: {MAX_QUESTIONS - questionCount}</div>
+  <div style={{ fontSize: "11px", color: "#888" }}>
+    Powered by AI • Answers generated from your documentation
+  </div>
 </div>
           <div style={{ display: "flex", borderTop: "1px solid #eee" }}>
             <input
@@ -140,7 +165,7 @@ localStorage.setItem("questionCount", newCount);
             <button
               onClick={askQuestion}
               style={{
-                background: "#2e8555",
+                background: "#1e3a8a",
                 color: "white",
                 border: "none",
                 padding: "0 16px",
@@ -156,7 +181,7 @@ localStorage.setItem("questionCount", newCount);
       <button
         onClick={() => setOpen(!open)}
         style={{
-          background: "#2e8555",
+          background: "#1e3a8a",
           color: "white",
           border: "none",
           borderRadius: "50%",

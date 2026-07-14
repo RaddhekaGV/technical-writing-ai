@@ -1,0 +1,120 @@
+---
+title: API Documentation Standards
+sidebar_position: 4
+---
+
+# API Documentation Standards
+
+API documentation helps developers understand how to integrate with an application or service. Effective API documentation should be complete, accurate, and easy to follow.
+
+## Purpose of API Documentation
+
+Good API documentation enables developers to:
+
+- Understand available endpoints.
+- Learn request and response formats.
+- Authenticate successfully.
+- Handle errors correctly.
+- Integrate quickly with minimal support.
+
+The documentation should answer common questions before developers need to ask them.
+
+## Describe Every Endpoint
+
+Each endpoint should include:
+
+- Endpoint URL
+- HTTP method (GET, POST, PUT, DELETE)
+- Purpose
+- Required permissions
+- Authentication requirements
+
+Example:
+
+| Property | Value |
+|----------|-------|
+| Endpoint | `/users` |
+| Method | GET |
+| Purpose | Retrieves all users |
+
+## Document Request Parameters
+
+Clearly describe:
+
+- Parameter name
+- Data type
+- Whether it is required
+- Description
+- Example value
+
+Example:
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| page | Integer | No | Page number |
+| limit | Integer | No | Number of records |
+
+## Document Responses
+
+Every endpoint should include:
+
+- Success response
+- Error response
+- Status codes
+- Example JSON
+
+Example:
+
+```json
+{
+  "id": 101,
+  "name": "Alice Smith",
+  "email": "alice@example.com"
+}
+```
+
+## Explain Error Codes
+
+Document common errors.
+
+Example:
+
+| Status Code | Meaning |
+|-------------|---------|
+| 200 | Success |
+| 400 | Invalid request |
+| 401 | Authentication required |
+| 404 | Resource not found |
+| 500 | Internal server error |
+
+Developers should understand how to resolve common issues.
+
+## Include Authentication Instructions
+
+If authentication is required, explain:
+
+- Authentication method
+- Required headers
+- Token format
+- Token expiration
+- Example request
+
+Clear authentication examples reduce integration problems.
+
+## Provide Working Examples
+
+Include complete examples whenever possible.
+
+Examples may include:
+
+- cURL commands
+- JavaScript
+- Python
+- Java
+- C#
+
+Practical examples significantly improve developer experience.
+
+## Summary
+
+Effective API documentation combines complete endpoint information, clear examples, accurate response descriptions, and consistent formatting. Well-written API documentation enables faster integrations and reduces developer support requests.
