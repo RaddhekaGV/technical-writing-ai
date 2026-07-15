@@ -76,25 +76,26 @@ baseUrl: '/',
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
-      },
+      title: '',
+      
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
+  {
+    to: '/',
+    label: 'Home',
+    position: 'left',
+  },
+  {
+    type: 'docSidebar',
+    sidebarId: 'tutorialSidebar',
+    position: 'left',
+    label: 'Help',
+  },
+  {
+    href: 'https://github.com/RaddhekaGV/technical-writing-ai',
+    label: 'GitHub',
+    position: 'right',
+  },
+],
     },
     footer: {
       style: 'dark',
