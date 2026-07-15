@@ -90,11 +90,12 @@ baseUrl: '/',
     position: 'left',
     label: 'Help',
   },
+  /*
   {
     href: 'https://github.com/RaddhekaGV/technical-writing-ai',
     label: 'GitHub',
     position: 'right',
-  },
+  },*/
 ],
     },
     footer: {
