@@ -141,7 +141,7 @@ baseUrl: '/',
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `© ${new Date().getFullYear()} Technical Writing AI. All rights reserved.`,
     },
     prism: {
       theme: prismThemes.github,
