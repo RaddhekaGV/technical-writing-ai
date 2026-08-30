@@ -20,6 +20,7 @@ const sidebars: SidebarsConfig = {
   'documentation-best-practices',
   'writing-style-guide',
   'common-documentation-mistakes',
+  'document-the-csv-bulk-upload-feature',
 ],
 
   // But you can create a sidebar manually
