@@ -20,6 +20,7 @@ const sidebars: SidebarsConfig = {
   'documentation-best-practices',
   'writing-style-guide',
   'common-documentation-mistakes',
+'document-the-two-factor-authentication-2fa-setup',
   'document-the-csv-bulk-upload-feature',
 ],
 
